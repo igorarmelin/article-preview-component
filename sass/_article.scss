@@ -1,0 +1,104 @@
+.section {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 730px;
+    height: 280px;
+    
+
+    -webkit-box-shadow: -3px 2px 23px -7px rgba(0,0,0,0.25);
+    -moz-box-shadow: -3px 2px 23px -7px rgba(0,0,0,0.25);
+    box-shadow: -3px 2px 23px -7px rgba(0,0,0,0.25);
+
+    @media only screen and (max-width: $bp-small){
+        flex-direction: column;
+        width: 100%;
+        height: 512px;
+    }
+
+    &__image {
+        align-self: stretch;
+        width: 285px;
+        flex-grow: 0;
+        object-fit: cover;
+        object-position: left;
+        filter: brightness(105%);
+
+        @media only screen and (max-width: $bp-small){
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    &__info {
+        padding: 40px;
+
+        &-h1 {
+            color: $color-dark-grayish-blue;
+            line-height: 1.5;
+
+            @media only screen and (max-width: $bp-small){
+                font-size: 1.6rem;
+            }
+        }
+
+        &-p {
+            margin-top: 10px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: $color-desatured-dark-blue;
+
+            @media only screen and (max-width: $bp-small){
+                font-size: 1.29rem;
+            }
+        }
+    }
+
+    &__profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 22px;
+
+        &-img {
+            width: 40px;
+            border-radius: 100px;
+            margin-right: 15px;
+        }
+
+        &__info {
+            margin-right: auto;
+
+            &-author {
+                font-weight: 700;
+                font-size: 1.3rem;
+                color: $color-dark-grayish-blue;
+            }
+
+            &-data {
+                color: $color-grayish-blue;
+                font-size: 1.3rem;
+            }
+        }
+
+        &-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 100px;
+            background-color: $color-light-grayish-blue;
+
+            & > img {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+.attribution {
+    margin-top: 50px;
+}
